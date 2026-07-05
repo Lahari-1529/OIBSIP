@@ -5,7 +5,7 @@ while True:
     #ask for length and checkif it is at least 8
     length=int(input("Enter password length(minimum 8):"))
     if length<8:
-        prinmt("error:Length must be 8 or more!")
+        print("error:Length must be 8 or more!")
      #Ask user what to include   
     print("Enter 'y' for yes and 'n' for no:")
     letters=input("Include Letters(a-z,A-Z)?")

@@ -4,9 +4,9 @@ from datetime import datetime
 HOST='127.0.0.1'
 PORT=12345
 def start_client():
-    client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    client=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     try:
-        client.connect((HOST, PORT))
+        client.connect((HOST,PORT))
     except ConnectionRefusedError:
         print("[ERROR] Could not connect to the server. Is chat_server.py running?")
         return

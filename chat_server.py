@@ -10,7 +10,7 @@ def handle_client(client_socket,client_address):
     while True:
         try:
             # Receive message from client
-            message = client_socket.recv(1024).decode('utf-8')
+            message=client_socket.recv(1024).decode('utf-8')
             if not message or message.lower()=='exit':
                 print(f"[DISCONNECT]{client_address}disconnected gracefully.")
                 break                
@@ -28,7 +28,7 @@ def handle_client(client_socket,client_address):
             break
     client_socket.close()
 def start_server():
-    server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    server=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     server.bind((HOST,PORT))
     server.listen(1)
     print(f"[STARTING]Server is listening on {HOST}:{PORT}...") 
